@@ -1,0 +1,79 @@
+/* Reset y base */
+*{box-sizing:border-box}
+body{font-family:Inter, Arial, sans-serif; margin:0; padding:20px; background:#f5f8fb; color:#102a43}
+h1{margin:0 0 8px;font-size:24px}
+h2{margin:12px 0 6px;font-size:18px}
+
+/* Contenedores */
+#controls{display:flex;gap:8px;align-items:center;margin:12px 0}
+#status{display:flex;gap:16px;align-items:center;flex-wrap:wrap}
+#roundInfo{font-weight:700}
+#message{color:#0b6e4f}
+
+/* Zonas de cartas */
+.zona-cartas{display:flex;flex-wrap:wrap;gap:10px;justify-content:center;background:#fff;border:1px solid #dfe7ef;padding:12px;border-radius:10px;min-height:96px;max-width:980px;margin:8px auto}
+
+/* Carta */
+.carta{min-width:72px;min-height:48px;padding:8px 10px;border-radius:8px;border:2px solid #233d4d;display:flex;align-items:center;justify-content:center;font-weight:700;cursor:pointer;user-select:none;transition:transform .12s,box-shadow .12s}
+.carta:hover{transform:translateY(-3px);box-shadow:0 6px 18px rgba(16,42,67,.12)}
+.carta.selected{outline:3px solid #ff6b6b;transform:translateY(-3px) scale(1.03)}
+
+/* Palos */
+.amarillo{background:#fff7b9}
+.magenta{background:#ffd0e9}
+.verde{background:#d5ffdd}
+.azul{background:#d6ecff}
+
+/* Botones */
+button{background:#0b6eff;color:#fff;border:none;padding:8px 12px;border-radius:8px;cursor:pointer;font-weight:700}
+button.secondary{background:#0b7285}
+button[disabled]{background:#bfcad0;cursor:not-allowed}
+
+/* Layout responsive */
+#board{display:flex;flex-direction:column;gap:12px;align-items:center}
+@media(min-width:880px){#board{flex-direction:row;align-items:flex-start} .col{width:48%}}
+
+/* Info machine */
+#machineInfo{font-size:14px;color:#073b4c}
+
+footer{margin-top:18px;font-size:13px;color:#334e68}
+
+/* Registro de jugadas */
+#logContainer {
+  max-width: 980px;
+  margin: 20px auto 10px auto;
+  background: #fff;
+  border: 1px solid #dfe7ef;
+  border-radius: 10px;
+  padding: 12px;
+  height: 150px;
+  overflow-y: auto;
+  font-family: monospace;
+  font-size: 14px;
+  color: #102a43;
+}
+#logContainer h2 { margin-top: 0; font-size: 16px; text-align:center; font-weight:700; }
+
+/* colores por autor de jugada */
+#log .log-player { color: #0b6e4f; font-weight:700; }
+#log .log-machine { color: #1e88e5; font-weight:700; }
+#log .log-system { color: #6b6b6b; font-style:italic; }
+
+/* marcador */
+#scores { display:flex; gap:12px; align-items:center; font-weight:700; }
+.score-box { background:#fff; border:1px solid #dfe7ef; padding:6px 10px; border-radius:8px; color:#102a43 }
+
+/* resumen de puntajes/bonos (separado del log) */
+#scoreSummary {
+  max-width: 980px;
+  margin: 8px auto 30px auto;
+  background:#fff;
+  border:1px solid #dfe7ef;
+  border-radius:10px;
+  padding:10px;
+  font-family:Arial, sans-serif;
+  font-size:14px;
+  color:#102a43;
+  min-height:40px;
+}
+#scoreSummary h3{ margin:0 0 8px 0; font-size:15px; text-align:center; }

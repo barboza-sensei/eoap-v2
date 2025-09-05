@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Entero o a pedazos (EOAP) — Prototipo</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <h1>Entero o a pedazos (EOAP)</h1>
+
+  <div id="controls">
+    <button id="startBtn">Iniciar partida</button>
+    <button id="playBtn" disabled>Jugar (sumar entero)</button>
+    <button id="passBtn" disabled class="secondary">Pasar carta a mesa</button>
+    <button id="restartBtn" style="display:none">Reiniciar</button>
+    <button id="nextRoundBtn" style="display:none" class="secondary">Siguiente ronda ▶</button>
+  </div>
+
+  <div id="status">
+    <div id="roundInfo">Ronda: -</div>
+    <div id="deckInfo">Mazo: -</div>
+    <div id="message"></div>
+    <div id="scores">
+      <div class="score-box">Jugador: <span id="playerScore">0</span></div>
+      <div class="score-box">Máquina: <span id="machineScore">0</span></div>
+      <div class="score-box">Carta especial: <span id="specialDisplay">-</span></div>
+    </div>
+  </div>
+
+  <div id="board" hidden>
+    <div class="col">
+      <h2>Mesa</h2>
+      <div id="table" class="zona-cartas"></div>
+    </div>
+
+    <div class="col">
+      <h2>Tu mano</h2>
+      <div id="hand" class="zona-cartas"></div>
+      <div style="text-align:center;margin-top:8px">
+        <small>Seleccioná 1 carta de tu mano y 1 o más cartas de la mesa para intentar formar un número entero.</small>
+      </div>
+      <h2 style="margin-top:14px">Máquina</h2>
+      <div id="machineInfo">—</div>
+    </div>
+  </div>
+
+  <div id="logContainer">
+    <h2>Registro de Jugadas</h2>
+    <div id="log"></div>
+  </div>
+
+  <div id="scoreSummary">
+    <h3>Resumen de puntajes / bonos</h3>
+    <div id="scoreLines"></div>
+  </div>
+
+  <footer>Prototipo funcional — prueba básica. Informame qué falla y lo ajusto.</footer>
+
+  <script src="js/game.js"></script>
+</body>
+</html>
